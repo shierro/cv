@@ -2,10 +2,8 @@
   <v-navigation-drawer
     persistent
     light
-    enable-resize-watcher
     overflow
     permanent
-    v-scroll="vScroll"
   >
     <v-card elevation-1 class="drawer__card">
       <v-avatar class="drawer__card--avatar">
@@ -24,7 +22,7 @@
           avatar 
           ripple 
           v-bind:key="index"
-          v-on:click.stop="active = index"
+          v-on:click.stop="navigate(index, nav.route, nav.title)"
           :class="active === index ? 'active' : ''">
           <v-list-tile-content>
             <v-list-tile-title class="drawer__nav-list--title">
@@ -54,30 +52,28 @@ export default {
       {
         title: 'Employment',
         icon: 'assignment',
-        class: 'material-icons icon green--text text--darken-2 icon--large'
+        class: 'material-icons icon green--text text--darken-2 icon--large',
+        route: '/employment'
       },
       {
         title: 'Education',
         icon: 'school',
-        class: 'material-icons icon blue--text text--darken-2 icon--large'
+        class: 'material-icons icon blue--text text--darken-2 icon--large',
+        route: '/education'
       },
       {
         title: 'Technical Expertise',
         icon: 'business',
-        class: 'material-icons icon yellow--text text--darken-2 icon--large'
+        class: 'material-icons icon yellow--text text--darken-2 icon--large',
+        route: '/technical-expertise'
       },
       {
         title: 'Language and Technologies',
         icon: 'code',
-        class: 'material-icons icon red--text text--darken-2 icon--large'
+        class: 'material-icons icon red--text text--darken-2 icon--large',
+        route: '/language-and-tech'
       }
-    ],
-    vScroll: {
-      callback: function () {
-        console.log('test')
-      },
-      target: 'div#app'
-    }
+    ]
   }),
   computed: {
     fullName: function () {
@@ -85,11 +81,10 @@ export default {
     }
   },
   methods: {
-    onScroll (e) {
-      this.highlightNavItem()
-    },
-    highlightNavItem () {
-      // TODO: Highlight navigation item when scrolled to it's section
+    navigate (index, route, title) {
+      this.active = index
+      this.$router.replace(route)
+      this.$store.dispatch('updateTitle', title)
     }
   }
 }
@@ -127,6 +122,12 @@ export default {
     
     li.active {
       background-color: rgba(0,0,0,.12);
+      box-shadow: 0 1px 5px rgba(0,0,0,.2), 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12);
+      
+      span {
+        color: #3F51B5;
+        font-weight: 600;
+      }
     }
 
     &--title {

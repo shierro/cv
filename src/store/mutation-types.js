@@ -1,0 +1,2 @@
+export const RECEIVE_TITLE = 'RECEIVE_TITLE'
+export const UPDATE_TITLE = 'UPDATE_TITLE'

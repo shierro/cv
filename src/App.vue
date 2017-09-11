@@ -1,12 +1,25 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <v-app id="app" toolbar footer>
+    <drawer></drawer>
+    <main-header></main-header>
+    <main>
+      <router-view></router-view>
+    </main>
+    <main-footer></main-footer>
+  </v-app>
 </template>
 
 <script>
+import Drawer from './components/Drawer'
+import Footer from './components/Footer'
+import MainHeader from './components/Header'
+
 export default {
-  name: 'app'
+  components: {
+    mainFooter: Footer,
+    Drawer,
+    MainHeader
+  }
 }
 </script>
 
