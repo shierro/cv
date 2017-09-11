@@ -7,7 +7,7 @@
     permanent
     v-scroll="vScroll"
   >
-    <v-card elevation-3 class="drawer__card">
+    <v-card elevation-1 class="drawer__card">
       <v-avatar class="drawer__card--avatar">
         <img src="../assets/picture.jpg" />
       </v-avatar>
@@ -20,7 +20,12 @@
     </v-card>
     <v-list two-line class="drawer__nav-list">
       <template v-for="(nav, index) in navList">
-        <v-list-tile avatar ripple v-bind:key="index">
+        <v-list-tile 
+          avatar 
+          ripple 
+          v-bind:key="index"
+          v-on:click.stop="active = index"
+          :class="active === index ? 'active' : ''">
           <v-list-tile-content>
             <v-list-tile-title class="drawer__nav-list--title">
               <i :class="nav.class">{{nav.icon }}</i>
@@ -43,6 +48,7 @@ export default {
       last: 'Pelingan',
       suffix: 'Jr.'
     },
+    active: -1,
     jobTitle: 'Fullstack Web Developer',
     navList: [
       {
@@ -103,7 +109,7 @@ export default {
       height: 100px !important;
       width: auto !important;
       display: block;
-      
+
       img {
         border-style: groove;
       }
@@ -118,6 +124,10 @@ export default {
 
    &__nav-list {
     padding: 0px;
+    
+    li.active {
+      background-color: rgba(0,0,0,.12);
+    }
 
     &--title {
       height: 30px;

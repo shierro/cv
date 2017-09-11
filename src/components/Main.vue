@@ -1,21 +1,22 @@
 <template>
-  <v-app id="example-1" toolbar footer>
+  <v-app id="cv" toolbar footer>
     <drawer></drawer>
     <v-toolbar class="indigo" dark>
       <v-toolbar-title>{{ toolbarTitle }}</v-toolbar-title>
     </v-toolbar>
     <main>
       <v-container fluid>
+        <employment></employment>
       </v-container>
     </main>
-    <v-footer class="indigo">
-      <span class="white--text">{{ credits }}</span>
-    </v-footer>
+    <main-footer></main-footer>
   </v-app>
 </template>
 
 <script>
 import Drawer from './Drawer'
+import Footer from './Footer'
+import Employment from './Employment'
 
 export default {
   data () {
@@ -25,10 +26,9 @@ export default {
     }
   },
   components: {
-    Drawer
+    Drawer,
+    mainFooter: Footer,
+    Employment
   }
 }
 </script>
-<style lang="scss" scoped>
-</style>
-
