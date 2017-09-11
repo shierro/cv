@@ -1,6 +1,6 @@
 <template>
   <v-toolbar class="indigo" dark fixed>
-    <v-toolbar-title class="hidden-sm-and-down">{{ toolbarTitle }}</v-toolbar-title>
+    <v-toolbar-title class="hidden-sm-and-down display-1">{{ toolbarTitle }}</v-toolbar-title>
     <v-flex class="links__container text-xs-right">
       <v-btn 
         icon 
@@ -66,6 +66,16 @@ export default {
       .btn--icon {
         background-size: 36px;
       }
+    }
+  }
+
+  .toolbar {
+    &__title {
+      font-weight: 800 !important;
+    }
+
+    &__content {
+      padding-left:4px;
     }
   }
 </style>

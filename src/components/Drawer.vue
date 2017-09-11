@@ -46,7 +46,7 @@ export default {
       last: 'Pelingan',
       suffix: 'Jr.'
     },
-    active: -1,
+    active: 0,
     jobTitle: 'Fullstack Web Developer',
     navList: [
       {
@@ -90,7 +90,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+$gray: #FAFAFA;
+$blue: #3F51B5;
+$dark-gray: rgba(0,0,0,.12);
+
  .drawer {
    &__card {
     display: block;
@@ -121,11 +125,11 @@ export default {
     padding: 0px;
     
     li.active {
-      background-color: rgba(0,0,0,.12);
+      background-color: $dark-gray;
       box-shadow: 0 1px 5px rgba(0,0,0,.2), 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12);
       
       span {
-        color: #3F51B5;
+        color: $blue;
         font-weight: 600;
       }
     }
