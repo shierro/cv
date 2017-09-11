@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="indigo links__container">
+  <v-footer class="indigo links__container" fixed>
     <v-btn 
       icon 
       v-for="(account, index) in accounts" 

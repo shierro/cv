@@ -1,7 +1,7 @@
 <template>
   <v-app id="cv" toolbar footer>
     <drawer></drawer>
-    <v-toolbar class="indigo" dark>
+    <v-toolbar class="indigo" dark fixed>
       <v-toolbar-title>{{ toolbarTitle }}</v-toolbar-title>
     </v-toolbar>
     <main>
