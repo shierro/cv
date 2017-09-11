@@ -80,10 +80,10 @@ export default {
   },
   methods: {
     onScroll (e) {
-      console.log(e)
+      this.highlightNavItem()
     },
     highlightNavItem () {
-
+      // TODO: Highlight navigation item when scrolled to it's section
     }
   }
 }
