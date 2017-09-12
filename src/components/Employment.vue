@@ -18,7 +18,6 @@
       <v-flex class="title details__task--header">{{job.taskHeader}}</v-flex>
       <v-list dense>
         <template v-for="(task, index) in job.tasks">
-          <v-divider v-bind:key="index"></v-divider>
           <v-list-tile v-bind:key="index" @click="clickTask()">
             <v-list-tile-content>
               <v-list-tile-title v-text="task"></v-list-tile-title>
@@ -115,7 +114,9 @@ export default {
 
   .application--light {
     .list {
-      background-color: $gray !important;
+      li:nth-child(odd) {
+        background-color: $gray !important; 
+      }
     }
   }
 
