@@ -46,7 +46,6 @@ export default {
       last: 'Pelingan',
       suffix: 'Jr.'
     },
-    active: 0,
     jobTitle: 'Fullstack Web Developer',
     navList: [
       {
@@ -76,13 +75,24 @@ export default {
     ]
   }),
   computed: {
-    fullName: function () {
+    fullName () {
       return `${this.name.first} ${this.name.middleInitial} ${this.name.last} ${this.name.suffix}`
+    },
+    active () {
+      switch (this.$route.name) {
+        case 'Education':
+          return 1
+        case 'TechnicalExpertise':
+          return 2
+        case 'LanguageAndTech':
+          return 3
+        default:
+          return 0
+      }
     }
   },
   methods: {
     navigate (index, route, title) {
-      this.active = index
       this.$router.replace(route)
       this.$store.dispatch('updateTitle', title)
     }
