@@ -1,6 +1,8 @@
 <template>
   <v-toolbar class="indigo" dark fixed>
-    <v-toolbar-title class="hidden-sm-and-down display-1">{{ toolbarTitle }}</v-toolbar-title>
+    <v-toolbar-title class="hidden-sm-and-down display-1">
+      {{ toolbarTitle }}
+    </v-toolbar-title>
     <v-flex class="links__container text-xs-right">
       <v-btn 
         icon 

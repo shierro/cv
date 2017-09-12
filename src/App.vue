@@ -3,7 +3,9 @@
     <drawer></drawer>
     <main-header></main-header>
     <main>
-      <router-view></router-view>
+      <v-slide-x-reverse-transition>
+        <router-view></router-view>
+      </v-slide-x-reverse-transition>
     </main>
     <main-footer></main-footer>
   </v-app>

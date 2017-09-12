@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <v-container
-      fluid
+<v-flex class="employment">
+  <v-expansion-panel popout focusable>
+    <v-expansion-panel-content
+      expand
       elevation-3
       v-for="(job, index) in jobs"
       class="details__container"
+      v-model="job.expanded"
       v-bind:key="index">
-      <div class="headline details__header--job__title">{{ job.title }}</div>
+      <div class="headline details__header--job__title" slot="header">{{ job.title }}</div>
       <div class="details__header">
         <div class="subheading">
           <span class="details__header--company__name">{{ job.company.name }}</span> 
@@ -25,8 +27,9 @@
           </v-list-tile>
         </template>
       </v-list>
-    </v-container>
-  </div>
+    </v-expansion-panel-content>
+  </v-expansion-panel>
+</v-flex>
 </template>
 
 <script>
@@ -45,14 +48,14 @@ export default {
           'Perform Scrum ceremonies',
           'Create services following the microservice Architecture',
           'Do Test Driven Development',
-          'Do CI / CD',
-          'Jenkins, OpenPass, Kubernetes',
+          'Do CI / CD with Jenkins & automated tests',
           'Track tasks through JIRA',
           'Create SPA(React w/Redux)',
           'Create css using SASS',
           'Create Unit & e2e Tests',
           'Follow Github Code Lifecycle'
-        ]
+        ],
+        expanded: true
       },
       {
         title: 'Software Engineer 2',
@@ -65,15 +68,15 @@ export default {
         tasks: [
           'Perform scrum ceremonies',
           'Follow as much as possible the AGILE Manifesto',
-          'Work with different Project environments (Staging, Pre-Prod, Prod)',
+          'Build and deploy applications to different environments (Staging, Pre-Prod, Prod)',
           'Do and be subject to code review',
           'Research the most appropriate tech(open source or proprietary) to provide for client/internal needs.',
-          'Meet Tight Deadlines',
           'Track tickets/tasks through Redmine',
           'Follow Git workflow',
           'Perform workflow automation(testing, deployment)',
           'Optimize website performance'
-        ]
+        ],
+        expanded: false
       },
       {
         title: 'Web Developer',
@@ -87,7 +90,6 @@ export default {
           'Website Maintenance/enhancement',
           'Creating,documenting & connecting to web RESTFUL APIs',
           'RDBMS Schema Modeling',
-          'Improving Website performance',
           'Building websites from scratch',
           'Uploading website files to server via FTP',
           'Creating CRON Jobs via linux bash',
@@ -96,7 +98,8 @@ export default {
           'Website testing/debugging/Architecture',
           'Building Websites that will actually scale.',
           'Optimize website performance'
-        ]
+        ],
+        expanded: false
       }
     ]
   }),
@@ -109,12 +112,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  $gray: #FAFAFA;
+  $gray: #efefef;
   $white: #FFFFFF;
+
+  .employment {
+    min-height: calc(100vh - 64px - 36px);
+  }
 
   .application--light {
     .list {
-      li:nth-child(odd) {
+      margin-right: 20px;
+
+      li:nth-child(even) {
         background-color: $gray !important; 
       }
     }
@@ -122,7 +131,7 @@ export default {
 
   .details {
     &__container {
-      padding: 20px;
+      padding: 10px 00px 20px 20px;
       background-color: $white;
     }
 
@@ -135,9 +144,10 @@ export default {
         }
       }
 
-
       &--job {
         &__title {
+          margin-left: -25px;
+          margin-right: -25px;
           font-weight: 800 !important;
         }
       }
@@ -150,6 +160,12 @@ export default {
       }
     }
   }
+
+  .expansion-panel {
+    background-color: $white;
+
+    &__header {
+      margin-right: -25px;
+    }
+  }
 </style>
-
-
