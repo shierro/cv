@@ -108,11 +108,6 @@ export default {
 <style lang="scss" scoped>
   @import '../assets/styles/_index.scss';
 
-  .employment {
-    min-height: calc(100vh - 64px - 36px);
-    background-color: $color-white;
-  }
-
   .expansion-panel {
     background-color: $color-white;
 
