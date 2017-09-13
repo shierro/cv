@@ -26,9 +26,6 @@ export default {
 </script>
 
 <style lang="scss">
-$gray: #FAFAFA;
-$blue: #3F51B5;
-
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

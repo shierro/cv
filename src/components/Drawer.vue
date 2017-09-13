@@ -31,7 +31,7 @@
             </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-divider v-if="index + 1 < navList.length" v-bind:key="index"></v-divider>
+        <v-divider v-bind:key="index"></v-divider>
       </template>
     </v-list>
   </v-navigation-drawer>
@@ -55,22 +55,22 @@ export default {
         route: '/employment'
       },
       {
-        title: 'Education',
-        icon: 'school',
-        class: 'material-icons icon blue--text text--darken-2 icon--large',
-        route: '/education'
-      },
-      {
-        title: 'Technical Expertise',
+        title: 'Technical Experience',
         icon: 'business',
         class: 'material-icons icon yellow--text text--darken-2 icon--large',
-        route: '/technical-expertise'
+        route: '/technical-experience'
       },
       {
         title: 'Language and Technologies',
         icon: 'code',
         class: 'material-icons icon red--text text--darken-2 icon--large',
         route: '/language-and-tech'
+      },
+      {
+        title: 'Education',
+        icon: 'school',
+        class: 'material-icons icon blue--text text--darken-2 icon--large',
+        route: '/education'
       }
     ]
   }),
@@ -80,11 +80,11 @@ export default {
     },
     active () {
       switch (this.$route.name) {
-        case 'Education':
+        case 'TechnicalExperience':
           return 1
-        case 'TechnicalExpertise':
-          return 2
         case 'LanguageAndTech':
+          return 2
+        case 'Education':
           return 3
         default:
           return 0
@@ -101,9 +101,7 @@ export default {
 </script>
 
 <style lang="scss">
-$gray: #FAFAFA;
-$blue: #3F51B5;
-$dark-gray: rgba(0,0,0,.12);
+@import '../assets/styles/_index.scss';
 
  .drawer {
    &__card {
@@ -135,10 +133,10 @@ $dark-gray: rgba(0,0,0,.12);
     padding: 0px;
     
     li.active {
-      background-color: $dark-gray;
+      background-color: $bg-color-dark-gray;
       
       span {
-        color: $blue;
+        color: $color-blue;
         font-weight: 600;
       }
     }

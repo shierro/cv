@@ -47,6 +47,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../assets/styles/_index.scss';
+
   .links {
     &__container {
       align-items: center;
@@ -73,7 +75,7 @@ export default {
 
   .toolbar {
     &__title {
-      font-weight: 800 !important;
+      @include headline();
     }
 
     &__content {

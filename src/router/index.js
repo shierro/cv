@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Education from '@/components/Education'
 import Employment from '@/components/Employment'
-import TechnicalExpertise from '@/components/TechnicalExpertise'
+import TechnicalExperience from '@/components/TechnicalExperience'
 import LanguageAndTech from '@/components/LanguageAndTech'
 
 Vue.use(Router)
@@ -12,7 +12,7 @@ export default new Router({
     {
       path: '/',
       name: 'Main',
-      redirect: '/employment'
+      redirect: '/technical-experience'
     },
     {
       path: '/employment',
@@ -25,9 +25,9 @@ export default new Router({
       component: Education
     },
     {
-      path: '/technical-expertise',
-      name: 'TechnicalExpertise',
-      component: TechnicalExpertise
+      path: '/technical-experience',
+      name: 'TechnicalExperience',
+      component: TechnicalExperience
     },
     {
       path: '/language-and-tech',

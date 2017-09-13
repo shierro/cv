@@ -3,7 +3,6 @@
   <v-expansion-panel popout focusable>
     <v-expansion-panel-content
       expand
-      elevation-3
       v-for="(job, index) in jobs"
       class="details__container"
       v-model="job.expanded"
@@ -20,7 +19,7 @@
       <v-flex class="title details__task--header">{{job.taskHeader}}</v-flex>
       <v-list dense>
         <template v-for="(task, index) in job.tasks">
-          <v-list-tile v-bind:key="index" @click="clickTask()">
+          <v-list-tile v-bind:key="index">
             <v-list-tile-content>
               <v-list-tile-title v-text="task"></v-list-tile-title>
             </v-list-tile-content>
@@ -102,67 +101,20 @@ export default {
         expanded: false
       }
     ]
-  }),
-  methods: {
-    clickTask () {
-      // Do something..
-    }
-  }
+  })
 }
 </script>
 
 <style lang="scss" scoped>
-  $gray: #efefef;
-  $white: #FFFFFF;
+  @import '../assets/styles/_index.scss';
 
   .employment {
     min-height: calc(100vh - 64px - 36px);
-  }
-
-  .application--light {
-    .list {
-      margin-right: 20px;
-
-      li:nth-child(even) {
-        background-color: $gray !important; 
-      }
-    }
-  }
-
-  .details {
-    &__container {
-      padding: 10px 00px 20px 20px;
-      background-color: $white;
-    }
-
-    &__header {
-      padding-bottom: 5px; 
-
-      &--company {
-        &__name {
-          font-weight: 600;
-        }
-      }
-
-      &--job {
-        &__title {
-          margin-left: -25px;
-          margin-right: -25px;
-          font-weight: 800 !important;
-        }
-      }
-    }
-
-    &__task {
-      &--header {
-        padding-top: 15px;
-        padding-bottom: 5px;
-      }
-    }
+    background-color: $color-white;
   }
 
   .expansion-panel {
-    background-color: $white;
+    background-color: $color-white;
 
     &__header {
       margin-right: -25px;
