@@ -24,7 +24,7 @@ export default {
       {
         name: 'linkedin',
         class: `blue--text links__container--linkedin`,
-        link: 'https://www.linkedin.com/in/theodoro-pelingan-jr-31b70711a/'
+        link: 'https://www.linkedin.com/in/theodoro-pelingan-jr'
       },
       {
         name: 'stackoverflow',
