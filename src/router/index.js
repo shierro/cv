@@ -12,7 +12,7 @@ export default new Router({
     {
       path: '/',
       name: 'Main',
-      redirect: '/technical-experience'
+      redirect: '/employment'
     },
     {
       path: '/employment',
