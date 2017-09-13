@@ -3,4 +3,4 @@
 * Built with Vuejs + Vuex with Vuetify
 
 # TODO
->Put some real data on [language & tech, educ] pages
+>Put some data on Education page :)
