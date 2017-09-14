@@ -13,14 +13,20 @@
 
 <script>
 import Drawer from './components/Drawer'
-import Footer from './components/Footer'
+import mainFooter from './components/Footer'
 import MainHeader from './components/Header'
 
 export default {
   components: {
-    mainFooter: Footer,
+    mainFooter,
     Drawer,
     MainHeader
+  },
+  mounted () {
+    const currentNav = this.$store.state.navList.filter(nav => nav.route === this.$route.path)
+    if (currentNav.length > 0) {
+      this.$store.dispatch('updateTitle', currentNav[0].title)
+    }
   }
 }
 </script>

@@ -46,33 +46,7 @@ export default {
       last: 'Pelingan',
       suffix: 'Jr.'
     },
-    jobTitle: 'Fullstack Web Developer',
-    navList: [
-      {
-        title: 'Employment',
-        icon: 'assignment',
-        class: 'material-icons icon green--text text--darken-2 icon--large',
-        route: '/employment'
-      },
-      {
-        title: 'Technical Experience',
-        icon: 'business',
-        class: 'material-icons icon yellow--text text--darken-2 icon--large',
-        route: '/technical-experience'
-      },
-      {
-        title: 'Language and Technologies',
-        icon: 'code',
-        class: 'material-icons icon red--text text--darken-2 icon--large',
-        route: '/language-and-tech'
-      },
-      {
-        title: 'Education',
-        icon: 'school',
-        class: 'material-icons icon blue--text text--darken-2 icon--large',
-        route: '/education'
-      }
-    ]
+    jobTitle: 'Fullstack Web Developer'
   }),
   computed: {
     fullName () {
@@ -86,9 +60,14 @@ export default {
           return 2
         case 'Education':
           return 3
+        case 'Contact':
+          return 4
         default:
           return 0
       }
+    },
+    navList () {
+      return this.$store.state.navList
     }
   },
   methods: {

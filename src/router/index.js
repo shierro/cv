@@ -4,6 +4,7 @@ import Education from '@/components/Education'
 import Employment from '@/components/Employment'
 import TechnicalExperience from '@/components/TechnicalExperience'
 import LanguageAndTech from '@/components/LanguageAndTech'
+import Contact from '@/components/Contact'
 
 Vue.use(Router)
 
@@ -33,6 +34,11 @@ export default new Router({
       path: '/language-and-tech',
       name: 'LanguageAndTech',
       component: LanguageAndTech
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact
     }
   ]
 })
