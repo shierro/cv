@@ -1,5 +1,4 @@
 import 'vuetify/dist/vuetify.min.css'
-import './assets/material-design-icons-2.2.0/iconfont/material-icons.css'
 
 import Vue from 'vue'
 import Vuetify from 'vuetify'

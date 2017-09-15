@@ -110,8 +110,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-  @import '../assets/styles/_index.scss';
+<style lang="scss">
+  // @import '../assets/styles/_index.scss';
 
  .tech-exp {
    &__headline {

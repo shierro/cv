@@ -74,9 +74,10 @@ export default {
         list: [
           { name: 'Bootstrap', rating: 4 },
           { name: 'Material', rating: 4 },
-          { name: 'Vuetify', rating: 4 }
+          { name: 'Vuetify', rating: 4 },
+          { name: 'SCSS', rating: 4 }
         ],
-        headline: 'CSS Frameworks'
+        headline: 'CSS Tech'
       },
       database: {
         list: [
@@ -105,7 +106,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../assets/styles/_index.scss';
+  // @import '../assets/styles/_index.scss';
 
   .lang-tech {
     .star-rating {

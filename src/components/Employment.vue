@@ -105,8 +105,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-  @import '../assets/styles/_index.scss';
+<style lang="scss">
+  // @import '../assets/styles/_index.scss';
 
   .expansion-panel {
     background-color: $color-white;

@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/styles/_index.scss';
+// @import '../assets/styles/_index.scss';
 
  .drawer {
    &__card {
