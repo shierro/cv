@@ -5,8 +5,8 @@
       <v-divider></v-divider>
       <v-container class="educ_body">
         <v-flex class="title educ__body--school__name">{{ school.name }}</v-flex>
-        <v-flex class="sub-heading educ__school__address">{{ school.address }}</v-flex>
-        <v-flex class="sub-heading">{{ duration }}</v-flex>
+        <v-flex class="sub-heading educ__body--school__address">{{ school.address }}</v-flex>
+        <v-flex class="sub-heading educ__body--duration">{{ duration }}</v-flex>
       </v-container>
     </v-container>
   </v-container>
@@ -26,8 +26,6 @@
 </script>
 
 <style lang="scss">
-  // @import '../assets/styles/_index.scss';
-
   .educ {
 
     &__headline {
