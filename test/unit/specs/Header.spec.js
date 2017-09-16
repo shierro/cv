@@ -16,7 +16,7 @@ const mockedStore = {
 }
 
 describe('Header.vue', () => {
-  it('should render with mocked message', function () {
+  it('should render with mocked message', () => {
     const vm = new Vue({
       template: '<div><main-header></main-header></div>',
       components: {

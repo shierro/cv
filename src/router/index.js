@@ -9,6 +9,8 @@ import Contact from '@/components/Contact'
 Vue.use(Router)
 
 export default new Router({
+
+  // Arrange according to drawer navigation
   routes: [
     {
       path: '/',
@@ -21,11 +23,6 @@ export default new Router({
       component: Employment
     },
     {
-      path: '/education',
-      name: 'Education',
-      component: Education
-    },
-    {
       path: '/technical-experience',
       name: 'TechnicalExperience',
       component: TechnicalExperience
@@ -34,6 +31,11 @@ export default new Router({
       path: '/language-and-tech',
       name: 'LanguageAndTech',
       component: LanguageAndTech
+    },
+    {
+      path: '/education',
+      name: 'Education',
+      component: Education
     },
     {
       path: '/contact',
