@@ -5,4 +5,4 @@
 * Built with Vuejs + Vuex with Vuetify
 
 # TODO
- - Integrate Travis CI
+ - Fix issues in codeclimate
