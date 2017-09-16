@@ -13,7 +13,7 @@
           <span class="details__header--company__name">{{ job.company.name }}</span> 
           <span class="details__header--company__stay">{{ job.company.stay }}</span>
         </div>
-        <div class="subheading">Makati, PH</div>
+        <div class="subheading details__header--company__location">{{ job.company.location }}</div>
       </div>
       <v-divider></v-divider>
       <v-flex class="title details__task--header">{{job.taskHeader}}</v-flex>

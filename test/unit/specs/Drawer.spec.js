@@ -12,7 +12,7 @@ Vue.config.productionTip = false
 
 describe('Drawer.vue', () => {
   const vm = new Vue({
-    template: '<div><left-drawer></left-drawer></div>',
+    template: '<LeftDrawer />',
     components: {
       LeftDrawer
     },

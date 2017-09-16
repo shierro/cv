@@ -12,7 +12,7 @@ describe('LanguageAndTech.vue', () => {
   const techCategories = Object.keys(componentData.languages)
   it('should render correct headline & number of items under a category', () => {
     const vm = new Vue({
-      template: '<div><language-tech></language-tech></div>',
+      template: '<div><LanguageTech /></div>',
       components: {
         LanguageTech
       }
