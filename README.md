@@ -5,5 +5,4 @@
 * Built with Vuejs + Vuex with Vuetify
 
 # TODO
->Write test cases
->Improve UI/UX
+ - Integrate Travis CI
