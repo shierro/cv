@@ -36,7 +36,7 @@ export default {
         type: 'Linkedin',
         value: 'https://www.linkedin.com/in/theodoro-pelingan-jr',
         class: 'material-icons icon blue--text text--darken-2 icon--large',
-        icon: 'linkedin',
+        icon: 'link',
         href: 'https://www.linkedin.com/in/theodoro-pelingan-jr'
       },
       {
