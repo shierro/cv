@@ -15,7 +15,7 @@ describe('TechnicalExpertise.vue', () => {
 
     // TODO: Test other stuff like sub-heading, etc
     _.each(projectList, (project, index) => {
-      expect(project.querySelector('.details__header--job__title').textContent.trim())
+      expect(project.querySelector('.details__header--job-title').textContent.trim())
         .to.equal(componentData.projects[index].title)
     })
   })

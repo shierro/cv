@@ -9,7 +9,7 @@
         v-for="(project, index) in projects" 
         v-model="project.expanded"
         :key="index">
-        <div class="title details__header--job__title" slot="header"> {{ project.title }} </div>
+        <div class="title details__header--job-title" slot="header"> {{ project.title }} </div>
         <div class="subheading tech-exp__sub-heading">{{ project.subTitle }}</div>
         <v-divider></v-divider>
         <v-flex class="body-2 details__task--header">{{project.featureHeader}}</v-flex>

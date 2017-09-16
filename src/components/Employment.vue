@@ -7,13 +7,13 @@
       class="details__container"
       v-model="job.expanded"
       v-bind:key="index">
-      <div class="headline details__header--job__title" slot="header">{{ job.title }}</div>
+      <div class="headline details__header--job-title" slot="header">{{ job.title }}</div>
       <div class="details__header">
         <div class="subheading">
-          <span class="details__header--company__name">{{ job.company.name }}</span> 
-          <span class="details__header--company__stay">{{ job.company.stay }}</span>
+          <span class="details__header--company-name">{{ job.company.name }}</span> 
+          <span class="details__header--company-stay">{{ job.company.stay }}</span>
         </div>
-        <div class="subheading details__header--company__location">{{ job.company.location }}</div>
+        <div class="subheading details__header--company-location">{{ job.company.location }}</div>
       </div>
       <v-divider></v-divider>
       <v-flex class="title details__task--header">{{job.taskHeader}}</v-flex>

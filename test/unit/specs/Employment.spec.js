@@ -13,13 +13,13 @@ describe('Employment.vue', () => {
 
     // TODO: Test other stuff like sub-heading, etc
     _.each(jobList, (job, index) => {
-      expect(job.querySelector('.details__header--job__title').textContent.trim())
+      expect(job.querySelector('.details__header--job-title').textContent.trim())
         .to.equal(componentData.jobs[index].title)
-      expect(job.querySelector('.details__header--company__name').textContent.trim())
+      expect(job.querySelector('.details__header--company-name').textContent.trim())
         .to.equal(componentData.jobs[index].company.name)
-      expect(job.querySelector('.details__header--company__stay').textContent.trim())
+      expect(job.querySelector('.details__header--company-stay').textContent.trim())
         .to.equal(componentData.jobs[index].company.stay)
-      expect(job.querySelector('.details__header--company__location').textContent.trim())
+      expect(job.querySelector('.details__header--company-location').textContent.trim())
         .to.equal(componentData.jobs[index].company.location)
     })
   })

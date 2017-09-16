@@ -3,38 +3,34 @@
 .lang-tech,
 .educ,
 .contact {
-  min-height: calc(100vh - 64px - 36px);
   background-color: $color-white;
+  min-height: calc(100vh - 64px - 36px);
 }
 
 .details {
   &__container {
-    padding: 10px 00px 20px 20px;
     background-color: $color-white;
+    padding: 10px 00px 20px 20px;
   }
 
   &__header {
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
 
-    &--company {
-      &__name {
-        font-weight: 600;
-      }
+    &--company-name {
+      font-weight: 600;
     }
 
-    &--job {
-      &__title {
-        margin-left: -25px;
-        margin-right: -25px;
-        @include headline();
-      }
+    &--job-title {
+      @include headline();
+      margin-left: -25px;
+      margin-right: -25px;
     }
   }
 
   &__task {
     &--header {
-      padding-top: 15px;
       padding-bottom: 5px;
+      padding-top: 15px;
     }
   }
 }
@@ -45,7 +41,7 @@ main {
     margin-right: 20px;
 
     li:nth-child(even) {
-      background-color: $color-gray !important; 
+      background-color: $color-gray !important;
     }
   }
 }
