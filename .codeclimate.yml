@@ -1,6 +1,8 @@
 engines:
   csslint:
     enabled: false
+  scss-lint: 
+    enabled: true
   duplication:
     enabled: true
     config:
@@ -12,12 +14,10 @@ engines:
     enabled: true
 ratings:
   paths:
-  - "**.css"
-  - "**.inc"
   - "**.js"
   - "**.vue"
+  - "**.scss"
 exclude_paths:
   - config/
   - test/
-  - "**.min.css"
-  - "**.min.css.map"
+  - docs/
