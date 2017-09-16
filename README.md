@@ -7,6 +7,7 @@
 # Install
 
 `
+$ git clone https://github.com/shierro/cv
 $ npm install
 `
 
