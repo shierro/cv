@@ -17,7 +17,7 @@ module.exports = {
       .assert.elementPresent('.employment')
       .assert.containsText('.toolbar__title', 'Employment')
       .assert.elementCount('img', 1)
-      .assert.elementCount('.drawer__nav-list li', 5)
+      .assert.elementCount('.drawer__nav-list li', 6)
       .end()
   }
 }

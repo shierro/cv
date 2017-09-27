@@ -9,7 +9,7 @@ Vue.config.productionTip = false
 
 const mockedStore = {
   getters: {
-    getTitle () {
+    getToolbarTitle () {
       return 'Mock Title'
     }
   }
@@ -26,7 +26,7 @@ describe('Header.vue', () => {
     }).$mount()
 
     expect(vm.$el.querySelector('.toolbar--fixed')).to.not.equal(undefined)
-    expect(vm.$el.querySelector('.toolbar__title').textContent.trim()).to.equal(mockedStore.getters.getTitle())
+    expect(vm.$el.querySelector('.toolbar__title').textContent.trim()).to.equal(mockedStore.getters.getToolbarTitle())
     expect(vm.$el.querySelector('.links__container').children.length).to.equal(3)
   })
 })

@@ -22,7 +22,7 @@
           avatar 
           ripple 
           v-bind:key="index"
-          v-on:click.stop="navigate(index, nav.route, nav.title)"
+          v-on:click.stop="navigate(nav.path)"
           :class="active === index ? 'active' : ''">
           <v-list-tile-content>
             <v-list-tile-title class="drawer__nav-list--title">
@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   data: () => ({
     name: {
@@ -49,31 +51,18 @@ export default {
     jobTitle: 'Fullstack Web Developer'
   }),
   computed: {
+    ...mapGetters(['navList', 'currentNav']),
+
     fullName () {
       return `${this.name.first} ${this.name.middleInitial} ${this.name.last} ${this.name.suffix}`
     },
     active () {
-      switch (this.$route.name) {
-        case 'TechnicalExperience':
-          return 1
-        case 'LanguageAndTech':
-          return 2
-        case 'Education':
-          return 3
-        case 'Contact':
-          return 4
-        default:
-          return 0
-      }
-    },
-    navList () {
-      return this.$store.state.navList
+      return this.navList.indexOf(this.currentNav)
     }
   },
   methods: {
-    navigate (index, route, title) {
-      this.$router.replace(route)
-      this.$store.dispatch('updateTitle', title)
+    navigate (path) {
+      this.$router.replace(path)
     }
   }
 }

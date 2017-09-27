@@ -21,12 +21,6 @@ export default {
     mainFooter,
     Drawer,
     MainHeader
-  },
-  mounted () {
-    const currentNav = this.$store.state.navList.filter(nav => nav.route === this.$route.path)
-    if (currentNav.length > 0) {
-      this.$store.dispatch('updateTitle', currentNav[0].title)
-    }
   }
 }
 </script>

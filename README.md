@@ -24,7 +24,7 @@ $ npm test
 $ npm run e2e
 `
 
-# Build prod files in /docs folder for github page
+# Build prod files in /docs folder
 `
 $ npm run build
 `

@@ -1,17 +1,53 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
 import Vuetify from 'vuetify'
 import StarRating from 'vue-star-rating'
+import Vuex from 'vuex'
 
 import App from '@/App'
-import store from '@/store'
 import router from '@/router'
+import getters from '@/store/getters'
+
+Vue.use(Vuex)
 
 Vue.component('star-rating', StarRating)
 
-Vue.use(Vuex)
 Vue.use(Vuetify)
 Vue.config.productionTip = false
+
+const debug = process.env.NODE_ENV !== 'production'
+const state = {
+  routeList: [
+    {
+      path: '/',
+      name: 'Main',
+      redirect: '/employment'
+    },
+    {
+      title: 'Employment',
+      icon: 'assignment',
+      class: 'material-icons icon green--text text--darken-2 icon--large',
+      path: '/employment',
+      name: 'Employment'
+    },
+    {
+      title: 'Technical Experience',
+      icon: 'business',
+      class: 'material-icons icon yellow--text text--darken-2 icon--large',
+      path: '/technical-experience',
+      name: 'TechnicalExperience'
+    }
+  ],
+  route: {
+    path: '/employment'
+  }
+}
+
+const store = new Vuex.Store({
+  dispatch: (title) => 'Test Title!',
+  getters,
+  state,
+  strict: debug
+})
 
 describe('App.vue', () => {
   it('should have Drawer, Footer and Header', () => {
@@ -20,8 +56,8 @@ describe('App.vue', () => {
       components: {
         App
       },
-      store,
-      router
+      router,
+      store
     }).$mount()
     vm._watcher.run()
 

@@ -1,7 +1,7 @@
 <template>
   <v-toolbar class="indigo" dark fixed>
     <v-toolbar-title class="hidden-sm-and-down display-1">
-      {{ toolbarTitle }}
+      {{ getToolbarTitle }}
     </v-toolbar-title>
     <v-flex class="links__container text-xs-right">
       <v-btn 
@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   data: () => ({
     accounts: [
@@ -39,9 +41,7 @@ export default {
     ]
   }),
   computed: {
-    toolbarTitle () {
-      return this.$store.getters.getTitle
-    }
+    ...mapGetters(['getToolbarTitle'])
   }
 }
 </script>
