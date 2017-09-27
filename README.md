@@ -28,3 +28,8 @@ $ npm run e2e
 `
 $ npm run build
 `
+
+# What's Next
+- Add more meat to `About Me` section
+- Add more e2e tests
+- Create Version 2

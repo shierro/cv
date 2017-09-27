@@ -17,7 +17,7 @@
 <script>
 export default {
   data: () => ({
-    headLine: 'About Me',
+    headLine: 'Personal Stuff',
     aboutMeList: [
       {
         title: 'Semi-Professional Gamer',
