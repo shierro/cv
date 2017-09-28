@@ -3,6 +3,9 @@ engines:
     enabled: false
   scss-lint: 
     enabled: true
+    checks:
+      ImportantRule:
+        enabled: false
   duplication:
     enabled: true
     config:
