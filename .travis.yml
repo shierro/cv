@@ -19,7 +19,5 @@ deploy:
     branch: master
 notifications:
   slack: ninjaro:clZjvDamAByBYA004CYcYlH6
-    on_success: always
-    on_failure: always
   email:
     - theodoro.pelingan@gmail.com
