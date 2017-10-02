@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import getters from './getters'
 
-import Education from '@/components/Education'
-import Employment from '@/components/Employment'
-import TechnicalExperience from '@/components/TechnicalExperience'
-import LanguageAndTech from '@/components/LanguageAndTech'
-import Contact from '@/components/Contact'
-import AboutMe from '@/components/AboutMe'
+import Education from '@/components/body/Education'
+import Employment from '@/components/body/Employment'
+import TechnicalExperience from '@/components/body/TechnicalExperience'
+import LanguageAndTech from '@/components/body/LanguageAndTech'
+import Contact from '@/components/body/Contact'
+import AboutMe from '@/components/body/AboutMe'
 
 Vue.use(Vuex)
 

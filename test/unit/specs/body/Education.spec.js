@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Education from '@/components/Education'
+import Education from '@/components/body/Education'
 
 describe('Education.vue', () => {
   const componentData = Education.data()

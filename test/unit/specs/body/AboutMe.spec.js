@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import _ from 'lodash'
-import AboutMe from '@/components/AboutMe'
+import AboutMe from '@/components/body/AboutMe'
 
 describe('AboutMe.vue', () => {
   const componentData = AboutMe.data()

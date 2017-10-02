@@ -20,7 +20,7 @@
       <template v-for="(nav, index) in navList">
         <v-list-tile 
           avatar 
-          ripple 
+          ripple
           v-bind:key="index"
           v-on:click.stop="navigate(nav.path)"
           :class="active === index ? 'active' : ''">

@@ -106,13 +106,7 @@ export default {
 </script>
 
 <style lang="scss">
-  // @import '../assets/styles/_index.scss';
-
   .expansion-panel {
     background-color: $color-white;
-
-    &__header {
-      margin-right: -25px;
-    }
   }
 </style>
