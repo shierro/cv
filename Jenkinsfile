@@ -30,8 +30,10 @@ pipeline {
     }
     stage ('Test'){
       steps {
-        lint: { sh "npm run lint" },
-        unit: { sh "npm run unit" }
+        parallel (
+          lint: { sh "npm run lint" },
+          unit: { sh "npm run unit" }
+        )
       }
     }
  
