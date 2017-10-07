@@ -1,0 +1,29 @@
+---
+# Workflow list definition
+# This list describes the order that the Jobs execute. The "main" Job is always
+# executed first, followed in order of the Jobs listed in this Workflow block.
+workflow:
+  - push-gs-pages
+
+
+# Shared definition block
+# This is where you would define any attributes that all your jobs will
+# inherit.
+shared:
+  # We specify a common NodeJS Docker image for our Jobs. It takes the form of
+  # "repo_name:tag_label", where the "tag_label" is optional.
+  # Docker image - https://hub.docker.com/r/library/node/
+  image: node:8
+
+# Jobs definition block
+# All pipelines have "main" by default, and is implicitly defined.
+jobs:
+  # main job is always executed
+  main:
+    steps:
+      - install: npm install
+      - test: npm test
+  push-gs-pages:
+    steps:
+      - build: npm run build
+      # - push: npm run push-gh-pages
