@@ -1,9 +1,6 @@
 pipeline { 
-  agent { 
-    node { 
-      label 'docker'
-    }
-  }
+  agent any 
+
   tools {
     nodejs 'nodejs'
   }
@@ -17,8 +14,7 @@ pipeline {
     stage ('Verify Tools'){
       steps {
         parallel (
-          node: { sh "npm -v" },
-          docker: { sh "docker -v" }
+          node: { sh "npm -v" }
         )
       }
     }
