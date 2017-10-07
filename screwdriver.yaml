@@ -2,8 +2,7 @@
 # Workflow list definition
 # This list describes the order that the Jobs execute. The "main" Job is always
 # executed first, followed in order of the Jobs listed in this Workflow block.
-workflow:
-  -
+
 # Shared definition block
 # This is where you would define any attributes that all your jobs will
 # inherit.
