@@ -12,7 +12,7 @@ $ git clone https://github.com/shierro/cv
 `
 
 `
-$ npm install
+$ cd cv && npm install
 `
 
 # Run unit test
