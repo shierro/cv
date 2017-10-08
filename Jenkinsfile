@@ -15,6 +15,7 @@ pipeline {
       steps {
         parallel (
           node: { sh "npm -v" }
+          git: { sh "git -v" }
         )
       }
     }
@@ -40,18 +41,11 @@ pipeline {
     }
     stage ('Deploy') {
       steps {
-        input "Ready to deploy?"
-        sh "echo TODO is deploy to gh pages"
-      }
-    }
-    stage ('Verify') {
-      steps {
-        input "Everything good?"
+        sh "npm run push-gh-pages"
       }
     }
     stage ('Clean') {
       steps {
-        sh "npm prune"
         sh "rm -rf node_modules"
       }
     }
