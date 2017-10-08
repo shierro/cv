@@ -34,14 +34,9 @@ pipeline {
       }
     }
  
-    stage ('Build container') {
+    stage ('Build and Deploy') {
       steps {
-        sh "npm run build"
-      }
-    }
-    stage ('Deploy') {
-      steps {
-        sh "npm run push-gh-pages"
+        sh "npm run deploy-to-git"
       }
     }
     stage ('Clean') {
