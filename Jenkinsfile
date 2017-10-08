@@ -15,7 +15,7 @@ pipeline {
       steps {
         parallel (
           node: { sh "npm -v" },
-          git: { sh "git -v" }
+          git: { sh "git version" }
         )
       }
     }
