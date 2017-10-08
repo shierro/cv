@@ -14,7 +14,7 @@ pipeline {
     stage ('Verify Tools'){
       steps {
         parallel (
-          node: { sh "npm -v" }
+          node: { sh "npm -v" },
           git: { sh "git -v" }
         )
       }
