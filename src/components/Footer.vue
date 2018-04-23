@@ -8,7 +8,7 @@
 export default {
   data () {
     return {
-      credits: '© 2017'
+      credits: '© 2017-2018'
     }
   }
 }

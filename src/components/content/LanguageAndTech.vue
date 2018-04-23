@@ -34,7 +34,7 @@ export default {
       native: {
         list: [
           { name: 'Javascript', rating: 4.5 },
-          { name: 'HTML/HTML5', rating: 4 },
+          { name: 'HTML/HTML5', rating: 4.5 },
           { name: 'CSS/CSS3', rating: 4 },
           { name: 'PHP', rating: 4 },
           { name: 'Java', rating: 3.5 }
@@ -44,19 +44,20 @@ export default {
       javascript: {
         list: [
           { name: 'jQuery', rating: 4.5 },
+          { name: 'NodeJS', rating: 4.5 },
+          { name: 'ExpressJS', rating: 4.5 },
           { name: 'React w/Redux', rating: 4 },
           { name: 'Angular 1 w/ MD', rating: 4 },
           { name: 'Vue w/Vuex & Vuetify', rating: 4 },
-          { name: 'ExpressJS', rating: 4 },
           { name: 'SocketIO', rating: 4 },
-          { name: 'Mocha Chai', rating: 4 },
+          { name: 'Mocha, Chai, Sinon, Supertest', rating: 4 },
           { name: 'ES6,7', rating: 4 },
           { name: 'Grunt/Gulp/Webpack', rating: 4 },
           { name: 'Istanbul', rating: 4 },
           { name: 'Sequelize/Mongoose', rating: 4 },
           { name: 'npm/yarn/bower', rating: 4 },
+          { name: 'babel', rating: 4 },
           { name: 'Nightwatch/Enzyme', rating: 3.5 },
-          { name: 'Prometheus', rating: 3.5 },
           { name: 'WebRTC', rating: 3.5 }
         ],
         headline: 'Javascript'
@@ -81,7 +82,7 @@ export default {
       },
       database: {
         list: [
-          { name: 'MySQL/MariaDB', rating: 4 },
+          { name: 'MySQL/MariaDB/SQL Server', rating: 4 },
           { name: 'PostgreSQL', rating: 4 },
           { name: 'MongoDB', rating: 4 },
           { name: 'Redis', rating: 4 }
@@ -90,13 +91,20 @@ export default {
       },
       others: {
         list: [
-          { name: 'GIT', rating: 4.5 },
-          { name: 'SVN', rating: 4 },
-          { name: 'docker/docker-compose', rating: 4 },
-          { name: 'AWS/OpenShift', rating: 4 },
-          { name: 'Kong', rating: 3.5 },
+          { name: 'GIT/SVN', rating: 4.5 },
+          { name: 'docker/compose/swarm', rating: 4.5 },
+          { name: 'AWS - EC2, Lambda, Cloudwatch, cloudfront, SNS, Route53, S3, etc.', rating: 4 },
+          { name: 'TravisCI/CircleCI/Jenkins/BB Pipelines', rating: 4 },
+          { name: 'CodeClimate/SonarQube', rating: 4 },
+          { name: 'OpenShift', rating: 4 },
+          { name: 'Kong/AWS API Gateway', rating: 3.5 },
+          { name: 'Bash', rating: 3.5 },
           { name: 'New Relic', rating: 3.5 },
-          { name: 'Kubernetes', rating: 3.5 }
+          { name: 'Kubernetes', rating: 3.5 },
+          { name: 'GCP w/Codefresh', rating: 3.5 },
+          { name: 'ELK Stack', rating: 3.5 },
+          { name: 'stefanprodan/dockprom Stack', rating: 3.5 },
+          { name: 'GraphQL', rating: 3.5 }
         ],
         headline: 'Dev/Ops & stuff'
       }
@@ -114,7 +122,7 @@ export default {
     }
 
     &__headline {
-     @include headline();
+      @include headline();
     }
 
     ul {

@@ -6,6 +6,6 @@ describe('Footer.vue', () => {
     const Constructor = Vue.extend(Footer)
     const vm = new Constructor().$mount()
     expect(vm.$el.querySelector('.credits__text').textContent)
-      .to.equal('© 2017')
+      .to.equal('© 2017-2018')
   })
 })

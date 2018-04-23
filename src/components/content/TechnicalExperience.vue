@@ -34,6 +34,35 @@ export default {
     projects: [
       {
         expanded: true,
+        title: 'Analytics - Financial application POC funnel',
+        subTitle: 'Various platforms that enables owner to understand more about the users & convert them to leads',
+        featureHeader: 'Modules/Pieces',
+        features: [
+          'Landing/static pages - Tilda',
+          'Collect survey - Typeform',
+          'Collect analytics/funnel/survey data - Mixpanel',
+          'Booking platform - Bookeo',
+          'Email campaigns - Mailchimp',
+          'Bridge platforms to mixpanel & notification(slack email) sender - Webhook Module',
+          'import data from mixpanel->DB, Mailchimp->Mixpanel, etc. - Data exporter module',
+          'Display rich query about campaigns, funnels, etc. -> Metabase'
+        ]
+      },
+      {
+        expanded: false,
+        title: 'Event Bot',
+        subTitle: 'Bot running on telegram & facebook messenger to manage events',
+        featureHeader: 'Modules',
+        features: [
+          'App interacting with messenger clients w/session management - Facebook module',
+          'App interacting with telegram clients w/session management - Telegram module',
+          'Data layer module built w/ an upfront REST API - Python Eve',
+          'Handle ticket checkout funnel & payment(Paypal) - Payment module',
+          'Admin panel to manage events/bots/messages/etc - AOR(v1), react-boilerplate fork(v2)'
+        ]
+      },
+      {
+        expanded: false,
         title: 'E-commerce for Travel Insurance',
         subTitle: 'Web platform for indonesia that provides the company the ability to sell insurance online.',
         featureHeader: 'Modules',
@@ -111,14 +140,14 @@ export default {
 </script>
 
 <style lang="scss">
- .tech-exp {
-   &__headline {
-     @include headline();
-   }
+.tech-exp {
+  &__headline {
+    @include headline();
+  }
 
-   &__sub-heading {
-     padding: 10px 0px;
-   }
- }
+  &__sub-heading {
+    padding: 10px 0px;
+  }
+}
 </style>
 

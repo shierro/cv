@@ -36,10 +36,34 @@ export default {
   data: () => ({
     jobs: [
       {
+        title: 'Fullstack Developer / DevOps',
+        company: {
+          name: 'ClinkIT Solutions / RareBirds',
+          stay: 'November 2017 - Present (5 mos)',
+          location: 'Remote'
+        },
+        taskHeader: 'Responsibilities:',
+        tasks: [
+          'Create micro-services while implementing code best practices',
+          'Create Unit & e2e Tests',
+          'Write serverless apps using the latest node version',
+          'Create SPA(react-boilerplate fork) apps',
+          'Design UI using SASS',
+          'App integrations - XERO, Tilda, Mixpanel, Typeform, bookeo, Mailchimp, Facebook API, Telegram API, Paypal, etc.',
+          'RND - Reporting & communication platforms',
+          'Create chatbots on facebook & telegram',
+          'Backlog management using JIRA. Convert CEO/CIO/PO requirements to technical solutions',
+          'Semi-gitflow pattern. Release management w/ semantic versioning',
+          'Set-up & utilize AWS technologies - [EC2, SNS, Cloudfront, Cloudwatch, Lambda, RDS, etc]',
+          'Work with different folks(Australian, Russian, Filipino, Indonesian) on different timezones'
+        ],
+        expanded: true
+      },
+      {
         title: 'Fullstack Web Developer',
         company: {
           name: 'VISEO',
-          stay: 'April 2017 - Present',
+          stay: 'April 2017 - December 2017 (8 mos)',
           location: 'Makati, PH'
         },
         taskHeader: 'Responsibilities:',
@@ -54,7 +78,7 @@ export default {
           'Create Unit & e2e Tests',
           'Follow Github Code Lifecycle'
         ],
-        expanded: true
+        expanded: false
       },
       {
         title: 'Software Engineer 2',
