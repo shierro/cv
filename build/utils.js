@@ -46,9 +46,9 @@ exports.cssLoaders = function (options) {
 
   let scssOptions = {
     includePaths: [
-      path.resolve('./src/assets/styles')
+      path.resolve('./src/styles')
     ],
-    data: '@import "./src/assets/styles/_index";'
+    data: '@import "./src/styles/_index";'
   }
 
   // https://vue-loader.vuejs.org/en/configurations/extract-css.html

@@ -21,7 +21,7 @@
         <v-list-tile 
           avatar 
           ripple
-          v-bind:key="index"
+          v-bind:key="`list-tile-${index}`"
           v-on:click.stop="navigate(nav.path)"
           :class="active === index ? 'active' : ''">
           <v-list-tile-content>
@@ -31,7 +31,7 @@
             </v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-divider v-bind:key="index"></v-divider>
+        <v-divider v-bind:key="`divider-${index}`"></v-divider>
       </template>
     </v-list>
   </v-navigation-drawer>
@@ -69,55 +69,55 @@ export default {
 </script>
 
 <style lang="scss">
- .drawer {
-   &__card {
+.drawer {
+  &__card {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+
+  &--avatar{
+    height: 100px !important;
+    width: auto !important;
     display: block;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
 
-    &--avatar{
-      height: 100px !important;
-      width: auto !important;
-      display: block;
-
-      img {
-        border-style: groove;
-      }
+    img {
+      border-style: groove;
     }
+  }
 
-    &--name {
-      font-weight: 600;
-      font-size: 1.2em;
-      display: block;
-    }
-   }
+  &--name {
+    font-weight: 600;
+    font-size: 1.2em;
+    display: block;
+  }
+  }
 
-   &__nav-list {
-    padding: 0px;
+  &__nav-list {
+  padding: 0px;
+  
+  li.active {
+    background-color: $bg-color-dark-gray;
     
-    li.active {
-      background-color: $bg-color-dark-gray;
-      
-      span {
-        color: $color-blue;
-        font-weight: 600;
-      }
+    span {
+      color: $color-blue;
+      font-weight: 600;
     }
+  }
 
-    &--title {
-      height: 30px;
-      line-height: 30px;
-      cursor: pointer;
+  &--title {
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
 
-      i {
-        margin-bottom: 5px;
-      }
+    i {
+      margin-bottom: 5px;
     }
-   }
- }
+  }
+  }
+}
 </style>
 
 

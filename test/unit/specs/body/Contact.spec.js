@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Contact from '@/components/body/Contact'
+import Contact from '@/components/content/Contact'
 
 describe('Contact.vue', () => {
   const componentData = Contact.data()

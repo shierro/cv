@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import _ from 'lodash'
-import LanguageTech from '@/components/body/LanguageAndTech'
+import LanguageTech from '@/components/content/LanguageAndTech'
 import StarRating from 'vue-star-rating'
 
 Vue.use(Vuetify)

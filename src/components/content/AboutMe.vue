@@ -4,8 +4,8 @@
     <v-divider></v-divider>
   <v-container class="aboutme__details">
     <v-container v-for="(me, index) in aboutMeList" :key="index">
-      <v-container :key="index" class="title">{{ me.title }}</v-container>
-      <v-container :key="index" class="subheading">
+      <v-container :key="`title-${index}`" class="title">{{ me.title }}</v-container>
+      <v-container :key="`subheading-${index}`" class="subheading">
         <a :href="me.content" target="_blank">{{ me.content }}</a>
         </v-container>
       <v-divider v-bind:key="index"></v-divider>

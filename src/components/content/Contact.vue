@@ -3,7 +3,7 @@
     <v-flex class="headline educ__headline">{{ headLine }}</v-flex>
     <v-divider></v-divider>
     <v-list two-line>
-      <template v-for="(contact, index) in contacts">
+      <template v-for="(contact) in contacts">
         <v-list-tile avatar v-bind:key="contact.type">
           <v-list-tile-avatar>
             <i :class="contact.class">{{contact.icon }}</i>

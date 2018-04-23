@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import _ from 'lodash'
-import TechnicalExperience from '@/components/body/TechnicalExperience'
+import TechnicalExperience from '@/components/content/TechnicalExperience'
 
 describe('TechnicalExpertise.vue', () => {
   const componentData = TechnicalExperience.data()

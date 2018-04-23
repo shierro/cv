@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import _ from 'lodash'
-import Employment from '@/components/body/Employment'
+import Employment from '@/components/content/Employment'
 
 describe('Employment.vue', () => {
   const componentData = Employment.data()
