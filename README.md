@@ -1,4 +1,6 @@
 # Vue - CV 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/shierro/cv.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/shierro/cv.png?branch=master)](https://travis-ci.org/shierro/cv) [![codecov](https://codecov.io/gh/shierro/cv/branch/master/graph/badge.svg)](https://codecov.io/gh/shierro/cv) [![codeclimate](https://codeclimate.com/github/shierro/cv/badges/gpa.svg)](https://codeclimate.com/github/shierro/cv) [![Issue Count](https://codeclimate.com/github/shierro/cv/badges/issue_count.svg)](https://codeclimate.com/github/shierro/cv)
 
 # See in action
