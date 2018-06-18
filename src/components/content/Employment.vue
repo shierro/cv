@@ -32,6 +32,11 @@
 </template>
 
 <script>
+import { monthDiff } from '@/utils/dateUtil'
+
+const latestStartDate = new Date(2017, 11, 20)
+const today = new Date()
+
 export default {
   data: () => ({
     jobs: [
@@ -39,23 +44,20 @@ export default {
         title: 'Fullstack Developer / DevOps',
         company: {
           name: 'ClinkIT Solutions / RareBirds',
-          stay: 'November 2017 - Present (5 mos)',
+          stay: `November 2017 - Present (${monthDiff(latestStartDate, today)} mos)`,
           location: 'Remote'
         },
         taskHeader: 'Responsibilities:',
         tasks: [
-          'Create micro-services while implementing code best practices',
-          'Create Unit & e2e Tests',
-          'Write serverless apps using the latest node version',
-          'Create SPA(react-boilerplate fork) apps',
-          'Design UI using SASS',
-          'App integrations - XERO, Tilda, Mixpanel, Typeform, bookeo, Mailchimp, Facebook API, Telegram API, Paypal, etc.',
+          'Create micro services(lambda or ec2) - following TDD',
+          'Create SPA(react-boilerplate fork) apps based on zeplin mockups',
+          'Create a chatbot on facebook & telegram',
+          'App integrations - XERO, Tilda, Mixpanel, Typeform, bookeo, Mailchimp, Facebook API, Telegram API, Paypal, Salesforce, etc.',
           'RND - Reporting & communication platforms',
-          'Create chatbots on facebook & telegram',
-          'Backlog management using JIRA. Convert CEO/CIO/PO requirements to technical solutions',
+          'Backlog management using JIRA. Convert CEO/CIO/PO requirements to technical solutions & chunked tasks',
           'Semi-gitflow pattern. Release management w/ semantic versioning',
           'Set-up & utilize AWS technologies - [EC2, SNS, Cloudfront, Cloudwatch, Lambda, RDS, etc]',
-          'Work with different folks(Australian, Russian, Filipino, Indonesian) on different timezones'
+          'Work remotely with different folks(Austraian, Russian, Filipino, Indonesian) on different timezones'
         ],
         expanded: true
       },
@@ -68,15 +70,16 @@ export default {
         },
         taskHeader: 'Responsibilities:',
         tasks: [
-          'Perform Scrum ceremonies',
-          'Create services following the microservice Architecture',
-          'Do Test Driven Development',
-          'Do CI / CD with Jenkins & automated tests',
-          'Track tasks through JIRA',
-          'Create SPA(React w/Redux)',
+          'Perform Scrum techniques',
+          'Create micro services',
+          'Follow TDD',
+          'Utilize a CI/CD pipeline - Jenkins, OpenShift, Sonarqube',
+          'Project management through JIRA',
+          'Create SPA(React w/Redux) from scratch',
           'Create css using SASS',
           'Create Unit & e2e Tests',
-          'Follow Github Code Lifecycle'
+          'Use git for source code control',
+          'Maintain & update legacy systems'
         ],
         expanded: false
       },
@@ -89,15 +92,15 @@ export default {
         },
         taskHeader: 'Responsibilities:',
         tasks: [
-          'Perform scrum ceremonies',
-          'Follow as much as possible the AGILE Manifesto',
-          'Build and deploy applications to different environments (Staging, Pre-Prod, Prod)',
-          'Do and be subject to code review',
-          'Research the most appropriate tech(open source or proprietary) to provide for client/internal needs.',
-          'Track tickets/tasks through Redmine',
+          'Follow SCRUM techniques',
+          'Build and deploy applications to multiple environments utilizing Docker',
+          'Manage code quality through code reviews',
+          'Research and development - Video conferencing',
+          'Project management using Redmine',
           'Follow Git workflow',
-          'Perform workflow automation(testing, deployment)',
-          'Optimize website performance'
+          'Create workflow automations(testing, deployment)',
+          'Optimize website performance',
+          'Convert mock-ups to usable AngularJS components'
         ],
         expanded: false
       },
@@ -110,17 +113,12 @@ export default {
         },
         taskHeader: 'Responsibilities:',
         tasks: [
-          'Website Maintenance/enhancement',
-          'Creating,documenting & connecting to web RESTFUL APIs',
-          'RDBMS Schema Modeling',
+          'Legacy website Maintenance/enhancement',
+          '3rd party platform integrations',
+          'RDBMS Schema modeling / optimization',
+          'Connecting, documenting & managing Restful APIs',
           'Building websites from scratch',
-          'Uploading website files to server via FTP',
-          'Creating CRON Jobs via linux bash',
-          'Identifying system bottlenecks',
-          'Event Driven/Realtime Systems',
-          'Website testing/debugging/Architecture',
-          'Building Websites that will actually scale.',
-          'Optimize website performance'
+          'Creating a realtime chat platform'
         ],
         expanded: false
       }

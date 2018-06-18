@@ -34,18 +34,19 @@ export default {
     projects: [
       {
         expanded: true,
-        title: 'Analytics - Financial application POC funnel',
-        subTitle: 'Various platforms that enables owner to understand more about the users & convert them to leads',
+        title: 'Leads generation funnel',
+        subTitle: 'A web-based funnel that converts traffic from ads to subscribers & leads',
         featureHeader: 'Modules/Pieces',
         features: [
           'Landing/static pages - Tilda',
           'Collect survey - Typeform',
-          'Collect analytics/funnel/survey data - Mixpanel',
+          'Collect user data - Mixpanel',
           'Booking platform - Bookeo',
           'Email campaigns - Mailchimp',
-          'Bridge platforms to mixpanel & notification(slack email) sender - Webhook Module',
+          'Allows platforms to communicate - Communications/Integrations Module',
           'import data from mixpanel->DB, Mailchimp->Mixpanel, etc. - Data exporter module',
-          'Display rich query about campaigns, funnels, etc. -> Metabase'
+          'Great display about campaigns, funnels, reports, etc. -> Metabase',
+          'Manage lead allocation - schedule & allocate to Partners - Job processing module'
         ]
       },
       {
